@@ -294,6 +294,37 @@ main {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .services-slider {
+        flex-direction: column;
+        overflow-y: auto;
+        max-height: 80vh;
+        padding: 1rem;
+    }
+
+    .slider-viewport {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .slider-track {
+        display: flex;
+        flex-direction: column;
+        transform: none;
+        gap: 1rem;
+    }
+
+    .service-card {
+        width: 100%;
+        min-width: unset;
+        margin: 0;
+    }
+
+    /* Hide slider buttons on mobile */
+    .slider-btn {
+        display: none;
+    }
+}
 
 footer {
     text-align: center;
