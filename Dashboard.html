@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!--<div style="position: absolute;">
+        <div class="avatar">
+            <!-- content -->
+        </div>
+    <!--</div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>-->
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">My Creative Portfolio Space</div>
+
+            <!--animated menu button + off-canvas menu -->
+            <button class="menu-button" id="menuButton" aria-controls="menuDrawer" aria-expanded="false" aria-label="Open menu">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </button>
+
+            <div class="menu-drawer" id="menuDrawer" aria-hidden="true">
+                <div class="menu-overlay" id="menuOverlay"></div>
+                <aside class="drawer-panel" role="dialog" aria-modal="true" aria-label="Main menu">
+                    <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+
+                    <nav class="drawer-nav">
+                        <a href="Dashboard.html" class="drawer-link">Home</a>
+                        <a href="#about" class="drawer-link">About me</a>
+                        <a href="" class="drawer-link">Ideas</a>
+                        <a href="" class="drawer-link">Social profile links</a>
+                        <a href="mailto:ritish@example.com" class="drawer-link">Send Mail</a>
+                    </nav>
+                    
+                   
+
+                </aside>
+            </div>
+            <!-- ...existing code... -->
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="top-sections">
+        <section id="home" class="section home-section">
+            <div class="home-content">
+                <div>
+                    <h1>Projects</h1>
+                    <!--Normal Creative projects-->
+                </div>
+            </div>
+        </section>
+        <section id="about" class="section about-section">
+            <h2>Games</h2>
+            <!--Game Projects-->
+        </section>
+        </div>
+
+        <section id="services" class="section services-section">
+            <h2>Service and Skills</h2>
+
+            <div class="services-slider">
+                <button class="slider-btn prev" aria-label="Previous">‹</button>
+
+                <div class="slider-viewport">
+                    <div class="slider-track">
+                        <div class="slide service-card">
+                            <h3>Web Design</h3>
+                            <p>Modern, responsive, and user-friendly web design for business or personal brand.</p>
+                        </div>
+                        <div class="slide service-card">
+                            <h3>Development</h3>
+                            <p>Front-end, Back-end, Full-stack development with the latest technologies for robust and scalable solutions.</p>
+                        </div>
+                        <div class="slide service-card">
+                            <h3>Branding</h3>
+                            <p>Creative branding and identity design project.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-btn next" aria-label="Next">›</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; My Portfolio. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+</html>

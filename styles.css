@@ -1,0 +1,304 @@
+body {
+    background: linear-gradient(120deg, #232526, #414345);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.avatar {
+    position: fixed;
+    width: 25vw;
+    height: 30vh;
+    max-width: 230px;
+    max-height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(219, 228, 207, 0.279);
+}
+
+/*.box1 {
+    position: fixed;
+    margin-top: 30vh;
+    width: 25vw;
+    height: 25vh;
+    max-width: 230px;
+    max-height: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(219, 228, 207, 0.279);
+}
+
+.box2 {
+    position: fixed;
+    margin-top: 37vh;
+    width: 25vw;
+    height: 25vh;
+    max-width: 230px;
+    max-height: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(219, 228, 207, 0.279);
+}
+
+.box3 {
+    position: fixed;
+    margin-top: 44vh;
+    width: 25vw;
+    height: 25vh;
+    max-width: 230px;
+    max-height: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(219, 228, 207, 0.279);
+}
+
+/*nav and menu bars, links, logo*/
+
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #8f54e2;
+    user-select: none;
+    padding-left: 120px;
+}
+
+/*main all sections*/
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 0 1rem;
+}
+
+/*all sections*/
+.section {
+    flex: 1 1 0;
+    padding: 2rem 0;
+    margin-right: 0;
+    border-radius: 16px;
+    background: rgba(39, 39, 39, 0.367);
+}
+
+/* home section */
+.home-section .home-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.home-section img.Me {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    margin: 0;
+}
+.home-section h1, h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+    color: #af81ef;
+}
+.top-sections {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    height: 350px;
+}   
+
+/*subtitle*/
+.subtitle {
+    font-size: 1.2rem;
+    color: #ffe4c4;
+    margin-bottom: 0.5rem;
+}
+
+/* service section */
+.services-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.service-card {
+    background: rgba(34, 73, 230, 0.12);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    min-width: 220px;
+    max-width: 320px;
+    flex: 1 1 220px;
+    text-align: center;
+    color: #142d43;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+.service-card h3 {
+    color: #502b1a;
+    margin-bottom: 0.7rem;
+}
+
+/* Services slider */
+.services-section { padding: 2rem 1rem; box-sizing: border-box; }
+.services-slider { position: relative; width: 100%; max-width: 1200px; margin: 0 auto; box-sizing: border-box; }
+.slider-viewport { overflow: hidden; width: 100%; }
+.slider-track { display: flex; transition: transform 400ms ease; will-change: transform; }
+.slide { box-sizing: border-box; padding: 1.5rem; flex: 0 0 100%; }
+
+/* Make service card visually similar to about box */
+.service-card { background: #4787d5; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); min-height: 180px; display: flex; flex-direction: column; justify-content: center; }
+
+/* Navigation buttons */
+.slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.328); color: #b99de7; border: none; width: 15px; height: 40px; border-radius: 20%; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 2; }
+.slider-btn.prev { left: 8px; }
+.slider-btn.next { right: 8px; }
+
+/* simplified menu button + animation (replaced for a simple, consistent top-right fixed button) */
+.menu-button{
+    position: fixed; /* fixed so it's always visible in the top-right of the viewport */
+    top: max(12px, env(safe-area-inset-top)); /* accounts for notches / safe areas */
+    right: max(12px, env(safe-area-inset-right));
+    width: 48px;
+    height: 48px;
+    border: 0;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
+    color: #d14b4b;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1400;
+    padding: 8px;
+    border-radius: 10px;
+    transition: background 180ms ease, transform 160ms ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.menu-button:active { transform: scale(0.98); }
+.menu-button .bar{
+    display: block;
+    width: 22px;
+    height: 2.5px;
+    background: #a151e7;
+    border-radius: 1px;
+    transition: transform 100ms ease, opacity 100ms ease;
+    transform-origin: center;
+}
+/* spacing between bars */
+.menu-button .bar + .bar { margin-top: 6px; }
+
+/* open state: bars form an X */
+.menu-button.open .bar1{
+    transform: translateY(0.1px) rotate(45deg);
+}
+
+.menu-button.open .bar3{
+    transform: translateY(-3px) rotate(-45deg);
+}
+
+/* make sure the fixed button doesn't overlap important content on small screens */
+@media (max-width: 420px) {
+    .menu-button { width:44px; height:44px; right: 10px; top: max(8px, env(safe-area-inset-top)); }
+    .menu-button .bar { width: 18px; }
+}
+
+/* off-canvas drawer */
+.menu-drawer{position: fixed; inset: 0; pointer-events: none; z-index: 1100;}
+.menu-overlay{
+    position: absolute; inset: 0; background: rgba(0,0,0,0.45); opacity: 0; transition: opacity 260ms ease; pointer-events: none;
+}
+.drawer-panel{
+    position: absolute;
+    top: 0;
+    right: -360px;
+    width: 320px;
+    max-width: calc(100% - 40px);
+    height: 100%;
+    background: #fff5e1;
+    box-shadow: -12px 0 30px rgba(0,0,0,0.15);
+    padding: 22px;
+    transform: translateX(0);
+    transition: right 300ms cubic-bezier(.2,.9,.3,1), box-shadow 200ms;
+    pointer-events: auto;
+    overflow-y: auto;
+}
+
+/* open state */
+.menu-drawer.open .menu-overlay{opacity:1; pointer-events: auto;}
+.menu-drawer.open .drawer-panel{ right: 0; }
+
+/* drawer internal styles */
+.drawer-close{
+    background: transparent; border: 0; font-size: 20px; float: right; cursor: pointer;
+}
+.drawer-nav{ display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.drawer-link{ color: #111; text-decoration: none; font-weight: 600; padding: 8px 6px; border-radius: 6px; }
+.drawer-link:hover{ background: rgba(0,0,0,0.05); }
+
+.drawer-contact{ margin-top: 18px; padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.06); }
+.drawer-contact h3{ margin:0 0 8px 0; }
+.drawer-contact input,
+.drawer-contact textarea{
+    width: 100%; padding: 10px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px;
+}
+.btn-submit{
+    display: inline-block; padding: 8px 12px; background: #0b79ff; color: white; border: 0; border-radius: 6px; cursor: pointer;
+}
+
+/* visually-hidden helper */
+.sr-only{ position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* Responsive: show 2 per view on medium, 3 on large */
+@media (min-width: 700px) {
+  .slide { flex: 0 0 50%; }
+}
+@media (min-width: 1100px) {
+  .slide { flex: 0 0 33.3333%; }
+}
+
+/* Optional: make section match About width if you use a common .section container */
+.section { max-width: 1200px; margin: 0 auto; padding: 1.5rem; box-sizing: border-box; }
+
+/* Responsive Styles */
+@media (max-width:1200px) {
+    main {
+        max-width: 98vw;
+        max-height: fit-content;
+    }
+}
+
+@media (max-width: 900px) {
+    .services-list {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .home-section .home-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .top-sections {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 700px) {
+    
+    main {
+        padding: 1rem 0.5rem 0 0.5rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 5rem;
+    color: #b2ff59;
+    background: transparent;
+    font-size: 0.7rem;
+}
