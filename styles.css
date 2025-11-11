@@ -7,16 +7,6 @@ body {
     box-sizing: border-box;
 }
 
-.avatar {
-    position: fixed;
-    width: 25vw;
-    height: 30vh;
-    max-width: 230px;
-    max-height: 250px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(219, 228, 207, 0.279);
-}
-
 /*.box1 {
     position: fixed;
     margin-top: 30vh;
@@ -48,10 +38,18 @@ body {
     max-height: 50px;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(219, 228, 207, 0.279);
-}
+}*/
 
 /*nav and menu bars, links, logo*/
-
+.avatar {
+    position: fixed;
+    width: 25vw;
+    height: 30vh;
+    max-width: 230px;
+    max-height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(219, 228, 207, 0.279);
+}
 
 .logo {
     font-size: 1.5rem;
@@ -63,7 +61,7 @@ body {
     text-align: center;
 }
 
-/*main all sections*/
+/* main layout */
 main {
     display: flex;
     flex-direction: column;
@@ -73,7 +71,7 @@ main {
     padding: 2rem 1rem 0 1rem;
 }
 
-/*all sections*/
+/* sections */
 .section {
     flex: 1 1 0;
     padding: 2rem 0;
@@ -110,16 +108,16 @@ main {
     gap: 2rem;
     margin-bottom: 2rem;
     height: 350px;
-}   
+}
 
-/*subtitle*/
+/* subtitle */
 .subtitle {
     font-size: 1.2rem;
     color: #ffe4c4;
     margin-bottom: 0.5rem;
 }
 
-/* service section */
+/* services list */
 .services-list {
     display: flex;
     gap: 2rem;
@@ -127,8 +125,10 @@ main {
     justify-content: center;
     margin-top: 2rem;
 }
+
+/* unified service-card */
 .service-card {
-    background: rgba(34, 73, 230, 0.12);
+    background: #b380d1;
     border-radius: 12px;
     padding: 1.5rem 2rem;
     min-width: 220px;
@@ -138,6 +138,11 @@ main {
     color: #142d43;
     margin-bottom: 1rem;
     margin-left: 1rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .service-card h3 {
     color: #502b1a;
@@ -151,23 +156,20 @@ main {
 .slider-track { display: flex; transition: transform 400ms ease; will-change: transform; }
 .slide { box-sizing: border-box; padding: 1.5rem; flex: 0 0 100%; }
 
-/* Make service card visually similar to about box */
-.service-card { background: #4787d5; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); min-height: 180px; display: flex; flex-direction: column; justify-content: center; }
-
 /* Navigation buttons */
 .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.328); color: #b99de7; border: none; width: 15px; height: 40px; border-radius: 20%; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 2; }
 .slider-btn.prev { left: 8px; }
 .slider-btn.next { right: 8px; }
 
-/* simplified menu button + animation (replaced for a simple, consistent top-right fixed button) */
+/* simplified menu button */
 .menu-button{
-    position: fixed; /* fixed so it's always visible in the top-right of the viewport */
-    top: max(12px, env(safe-area-inset-top)); /* accounts for notches / safe areas */
+    position: fixed;
+    top: max(12px, env(safe-area-inset-top));
     right: max(12px, env(safe-area-inset-right));
     width: 48px;
     height: 48px;
     border: 0;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0, 0, 0, 0.388);
     backdrop-filter: blur(6px);
     color: #d14b4b;
     display: inline-flex;
@@ -190,19 +192,13 @@ main {
     transition: transform 100ms ease, opacity 100ms ease;
     transform-origin: center;
 }
-/* spacing between bars */
 .menu-button .bar + .bar { margin-top: 6px; }
-
-/* open state: bars form an X */
 .menu-button.open .bar1{
     transform: translateY(0.1px) rotate(45deg);
 }
-
 .menu-button.open .bar3{
     transform: translateY(-3px) rotate(-45deg);
 }
-
-/* make sure the fixed button doesn't overlap important content on small screens */
 @media (max-width: 420px) {
     .menu-button { width:44px; height:44px; right: 10px; top: max(8px, env(safe-area-inset-top)); }
     .menu-button .bar { width: 18px; }
@@ -228,18 +224,15 @@ main {
     pointer-events: auto;
     overflow-y: auto;
 }
-
-/* open state */
 .menu-drawer.open .menu-overlay{opacity:1; pointer-events: auto;}
 .menu-drawer.open .drawer-panel{ right: 0; }
 
-/* drawer internal styles */
 .drawer-close{
     background: transparent; border: 0; font-size: 20px; float: right; cursor: pointer;
 }
 .drawer-nav{ display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
 .drawer-link{ color: #111; text-decoration: none; font-weight: 600; padding: 8px 6px; border-radius: 6px; }
-.drawer-link:hover{ background: rgba(0,0,0,0.05); }
+.drawer-link:hover{ background: rgba(99, 51, 120, 0.6); color: white; }
 
 .drawer-contact{ margin-top: 18px; padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.06); }
 .drawer-contact h3{ margin:0 0 8px 0; }
@@ -248,13 +241,13 @@ main {
     width: 100%; padding: 10px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px;
 }
 .btn-submit{
-    display: inline-block; padding: 8px 12px; background: #0b79ff; color: white; border: 0; border-radius: 6px; cursor: pointer;
+    display: inline-block; padding: 8px 12px; background: #a672ca; color: white; border: 0; border-radius: 6px; cursor: pointer;
 }
 
 /* visually-hidden helper */
 .sr-only{ position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
-/* Responsive: show 2 per view on medium, 3 on large */
+/* Responsive: slides per view */
 @media (min-width: 700px) {
   .slide { flex: 0 0 50%; }
 }
@@ -288,7 +281,6 @@ main {
     }
 }
 @media (max-width: 700px) {
-    
     main {
         padding: 1rem 0.5rem 0 0.5rem;
         flex-direction: column;
@@ -331,7 +323,9 @@ main {
 footer {
     text-align: center;
     margin-top: 5rem;
-    color: #b2ff59;
+    color: #bd73dadb;
     background: transparent;
     font-size: 0.7rem;
+    position: sticky;
+    bottom: 0;
 }
